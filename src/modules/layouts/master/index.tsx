@@ -1,5 +1,4 @@
 import { Card, Icon } from "@mui/material";
-import Footer from "assets/examples/Footer";
 import DashboardLayout from "assets/examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "assets/examples/Navbars/DashboardNavbar";
 import DataTable from "assets/examples/Tables/DataTable";
@@ -159,8 +158,6 @@ const MasterList = () => {
           <DataTable table={dataTableData} canSearch />
         </Card>
       </MDBox>
-
-      <Footer />
     </DashboardLayout>
   );
 };

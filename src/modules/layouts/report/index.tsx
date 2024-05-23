@@ -1,5 +1,4 @@
 import { Card } from "@mui/material";
-import Footer from "assets/examples/Footer";
 import DashboardLayout from "assets/examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "assets/examples/Navbars/DashboardNavbar";
 import DataTable from "assets/examples/Tables/DataTable";
@@ -94,8 +93,6 @@ const Transactions = () => {
         title="Something went wrong. Please try again later."
         close={() => setError(false)}
       />
-
-      <Footer />
     </DashboardLayout>
   );
 };

@@ -1,5 +1,4 @@
 import { Card, Checkbox, Grid } from "@mui/material";
-import Footer from "assets/examples/Footer";
 import DashboardLayout from "assets/examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "assets/examples/Navbars/DashboardNavbar";
 import MDBox from "components/MDBox";
@@ -68,8 +67,6 @@ const Authentication = () => {
           </MDBox>
         </Card>
       </Grid>
-
-      <Footer />
     </DashboardLayout>
   );
 };
