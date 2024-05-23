@@ -13,22 +13,22 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState, useEffect, useMemo, JSXElementConstructor, Key, ReactElement } from "react";
+import { JSXElementConstructor, Key, ReactElement, useEffect, useMemo, useState } from "react";
 
 // react-router components
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 
 // @mui material components
-import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
+import { ThemeProvider } from "@mui/material/styles";
 
 // Material Dashboard 2 PRO React TS components
 import MDBox from "components/MDBox";
 
 // Material Dashboard 2 PRO React TS exampless
-import Sidenav from "modules/sideNav";
 import Configurator from "assets/examples/Configurator/Configurator";
+import Sidenav from "modules/sideNav";
 
 // Material Dashboard 2 PRO React TS themes
 import theme from "modules/settings/theme-settings/theme";
@@ -39,19 +39,19 @@ import themeDark from "modules/settings/theme-settings/theme-dark";
 import themeDarkRTL from "modules/settings/theme-settings/theme-dark/theme-rtl";
 
 // RTL plugins
-import rtlPlugin from "stylis-plugin-rtl";
-import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
+import rtlPlugin from "stylis-plugin-rtl";
 
 // Material Dashboard 2 PRO React TS routes
 import routes from "routes";
 
 // Material Dashboard 2 PRO React TS contexts
-import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
+import { setMiniSidenav, setOpenConfigurator, useMaterialUIController } from "context";
 
 // Images
-import brandWhite from "assets/images/logo-ct.png";
 import brandDark from "assets/images/logo-ct-dark.png";
+import brandWhite from "assets/images/logo-ct.png";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -175,7 +175,7 @@ export default function App() {
         {layout === "vr" && <Configurator />}
         <Routes>
           {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+          <Route path="*" element={<Navigate to="/report/transactions" />} />
         </Routes>
       </ThemeProvider>
     </CacheProvider>
@@ -199,7 +199,7 @@ export default function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+        <Route path="*" element={<Navigate to="/report/transactions" />} />
       </Routes>
     </ThemeProvider>
   );
