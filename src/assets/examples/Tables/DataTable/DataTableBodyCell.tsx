@@ -43,7 +43,7 @@ function DataTableBodyCell({
   onEditRow,
 }: Props): JSX.Element {
   const renderData = () => {
-    const editable = editRows.includes(cell?.row?.values?.id);
+    const editable = editRows?.includes(cell?.row?.values?.id) || false;
 
     if (cell?.column?.id === "edit") {
       return (
